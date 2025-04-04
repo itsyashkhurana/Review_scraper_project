@@ -1,0 +1,86 @@
+{
+  "product_name": "GitHub",
+  "number_of_reviews": "2,199 reviews",
+  "reviews": [
+    {
+      "username": "Lautaro S.",
+      "summary": "N/A",
+      "review": "What do you like best about GitHub?All my work as a Developer has changed since GitHub came into my life.  I never worry about accidentally deleting or deleting critical code. If something goes wrong, I just go back to an earlier version and that’s it. When I need to test something without changing the main code, the ability to deal with branches has saved me more than once. By using code reviews and pull requests, we can keep our workflow organized, make changes in real time, and comment on individual lines. Reviewing, commenting and suggesting changes to my coworkers' code directly on pull requests is a fantastic example of team collaboration. Thanks to GitHub, I no longer have coding errors and the quality of our code has increased.Review collected by and hosted on G2.com.What do you dislike about GitHub?For those who are not familiar with Git, at first, the learning curve can be a bit high. I still remember the first time I tried to set up a workflow using GitHub Actions, at that point programming was not my priority; I spent more time reading documentation.Review collected by and hosted on G2.com.What problems is GitHub solving and how is that benefiting you?Our entire development process now runs on GitHub. We can communicate without accidentally overwriting files, all changes are well documented, and the code is never lost because we use it. We can locate the source of a production issue because GitHub recorded every change we made. Without any drama, we simply examine the confirmations, identify the problem and solve it. It has also been very helpful for our security, we guarantee that there are no safety failures or defects in production, we do code reviews for each extraction request. The advantages outweigh the disadvantages considerably, despite some minor problems such as learning curve and limited integrations.Review collected by and hosted on G2.com.",
+      "date": "Feb 11, 2025",
+      "url": "https://www.g2.com/products/github/reviews/github-review-10825958",
+      "rating": "4.5"
+    },
+    {
+      "username": "Rajat B.",
+      "summary": "N/A",
+      "review": "What do you like best about GitHub?I personally use Github in my company to save the Customer's custom code review by my manager and push the changes in the Git Repo.This is best in this scenario because it also distinguish the change like what was the code before and what changes you made in the code.Review collected by and hosted on G2.com.What do you dislike about GitHub?I personally don't dislike Github because it works well in my professional experience.Review collected by and hosted on G2.com.What problems is GitHub solving and how is that benefiting you?Github solves my problem like we made some changes in the client's Production approx 7-8 months before and then suddenly we recieved the client's mail that somethung went wrong, So we know what exactly change we did at that time and in which class or triggers we made changes so we revert those changes and write the new code, so all this possilbe bacauase we merge out code into as a Git Repo.Review collected by and hosted on G2.com.",
+      "date": "Feb 06, 2025",
+      "url": "https://www.g2.com/products/github/reviews/github-review-10666414",
+      "rating": "5.0"
+    },
+    {
+      "username": "Dane B.",
+      "summary": "N/A",
+      "review": "What do you like best about GitHub?It just works. It's super easy to use, can be implemented in no time, and has a good set of features built in. Other features can be added through the plethora of available integrations.Review collected by and hosted on G2.com.What do you dislike about GitHub?It can be a bit overwhelming trying to understand all the settings and hidden functionality, particularly when running configuring builds.Review collected by and hosted on G2.com.What problems is GitHub solving and how is that benefiting you?GitHub solves problems that all software teams have: Where you do you host your code and how do you build it? It used to be that many/most companies that used git were using self-hosted source control servers and build servers. Github tackles both of these by putting these services in the cloud and making it really cost effective: You can pay for a dozen users or more for what it would cost you to set up your own servers and maintain them.Review collected by and hosted on G2.com.",
+      "date": "Feb 03, 2025",
+      "url": "https://www.g2.com/products/github/reviews/github-review-10794824",
+      "rating": "5.0"
+    },
+    {
+      "username": "Kyle J.",
+      "summary": "N/A",
+      "review": "What do you like best about GitHub?GitHub has great collaboration features that allow our development team to work on the same project together. From code reviews and discussions, it dramatically streamlines our ability to push great code to our customers. It also offers excellent version control through Git, keeping our team updated on code changes. It's easy to start with their free hosting, so it's a no-brainer for students wanting to learn to code.Review collected by and hosted on G2.com.What do you dislike about GitHub?The learning curve can be a bit steep for beginners. Once you understand the core concepts like branching, merging, and resolving conflicts, it gets much more straightforward. Large binary files and large media content can slow repository performance and storage costs. Free private repositories are limited in features and size. If you have multiple private repositories, get ready to pay.Review collected by and hosted on G2.com.What problems is GitHub solving and how is that benefiting you?I would say the two main problems GitHub solves for me is code collaboration, and version control.Code collaboration allows our team to track changes across our various projects. We have a clear history of our projects, so we don't waste time communicating through various other channels because we have one source we can all collaborate in.Version control can be very complex, especially with large projects. GitHub simplifies this process by allowing you to create branches for experimental features. If something goes wrong with a code release, rolling back your code is easy. Since every code change is recorded, you can see every change.Review collected by and hosted on G2.com.",
+      "date": "Dec 17, 2024",
+      "url": "https://www.g2.com/products/github/reviews/github-review-10658313",
+      "rating": "5.0"
+    },
+    {
+      "username": "Jay Y.",
+      "summary": "N/A",
+      "review": "What do you like best about GitHub?Most of my engineers are already familiar with Github as a version control platform. Customer support is good.Review collected by and hosted on G2.com.What do you dislike about GitHub?Github Enterprise sales and pricing is very opaque and arbitrary. In two companies I have engaged with 3 people on their sales team. They can offer discounts from 15%, 40%, up to  60%. You end up with different deals depending on who you engage with. This time, we dealt with an AE Nick, and a Senior Director Karen J. Karen kept offering deals/terms worse than the one from Nick, who is from her own team! And I had to point it to her. It shows how uncoordinated and arbitrary this is. It is very frustrating process to deal. So we stopped our expansion plan on Github (Advanced Security and Github Actions). We may even consider swtiching to Gitlab altogether. There are just so many strong alternatives on this market for security and CI.Review collected by and hosted on G2.com.What problems is GitHub solving and how is that benefiting you?1. We use it mostly as a version control system. We are still using Github for this purpose2. For Github Advanced Security, we tried but the sale demo was lacking, the pricing was not at all competitive, and we stopped after the 1 month trial. We went for a bundled deal with Wiz.io instead, which is a company focused on security and offers a central dashboard for security.Review collected by and hosted on G2.com.",
+      "date": "Nov 27, 2024",
+      "url": "https://www.g2.com/products/github/reviews/github-review-10577614",
+      "rating": "0.5"
+    },
+    {
+      "username": "Ritik S.",
+      "summary": "N/A",
+      "review": "What do you like best about GitHub?1. Very simple to setup, as you login every command is provided to help you go through basics.2. I like the one thing about github rebasing is that it does not collapse the code, as I faced such problems in Bitbucket.3. Repository sharing feature is just the best. You get to shine the profile for your open source projects.4. Since backuped by Microsoft, I have no trust issues regarding security and performance.Review collected by and hosted on G2.com.What do you dislike about GitHub?1. Github has been amazing, all my repos are still there and I use it. Why do not many companies use it, such an amazing productive tool.Review collected by and hosted on G2.com.What problems is GitHub solving and how is that benefiting you?Github has been very crucial tool for managing my code projects. It helped a team of developers to work in seameless manner on a code project without worrying of versioning, merging and managing your lines.Review collected by and hosted on G2.com.",
+      "date": "Dec 20, 2024",
+      "url": "https://www.g2.com/products/github/reviews/github-review-10672634",
+      "rating": "5.0"
+    },
+    {
+      "username": "Varun R.",
+      "summary": "N/A",
+      "review": "What do you like best about GitHub?What I like is it makes version control and collaborating with team members lot more convinient. Also it has pros like pull requests, code reviews, and branches that make it easy to work on projects with a team and debug issues faster.Review collected by and hosted on G2.com.What do you dislike about GitHub?One thing I feel is that it can be a bit overwhelming for newer developers who have a little to no knowledge about version control. The featuresa are powerful and well designed but could be very intimidating if you are a beginner.Review collected by and hosted on G2.com.What problems is GitHub solving and how is that benefiting you?For me personally it adress a lot of problems that I had with other platforms like bitbucket and gitlab like version control, collaboration, and code management along with a beautiful dashborad design. Other that that we have powerful pull requests and integration tools that make a life lot easier especially for me.Review collected by and hosted on G2.com.",
+      "date": "Dec 19, 2024",
+      "url": "https://www.g2.com/products/github/reviews/github-review-10659075",
+      "rating": "5.0"
+    },
+    {
+      "username": "Aditya V.",
+      "summary": "N/A",
+      "review": "What do you like best about GitHub?The best thing about GitHub is obviously its ability to help people connect with each to work on a project and keep track of the collective progress. It is the reason individuals like I and big organisations use it as well.Review collected by and hosted on G2.com.What do you dislike about GitHub?The only gripe I have with GitHub is that it doesnt allow live code updates, it only shows the changes when somebody pushes it and doesn't show dynamic changes. Since we can have our own branches we should get this feature on seperate branches.Review collected by and hosted on G2.com.What problems is GitHub solving and how is that benefiting you?It can solve the problem of collaboration between multiple teams from multiple locations on a large scale project and streamline the process of application delivery. It can also solve the privacy problem of confidential projects as it provides with multiple steps of protection.Review collected by and hosted on G2.com.",
+      "date": "Jan 02, 2025",
+      "url": "https://www.g2.com/products/github/reviews/github-review-10702305",
+      "rating": "5.0"
+    },
+    {
+      "username": "Chinmay G.",
+      "summary": "N/A",
+      "review": "What do you like best about GitHub?Ability to store share codes, scripts, configs and easy to collaborate across teamsAnyone can access and edit remotely and version control efficiency is greatReview collected by and hosted on G2.com.What do you dislike about GitHub?Sometimes a bit complex to beginners or non technical guy if he wan to access repositoriesLarge repositories may be slow to operateReview collected by and hosted on G2.com.What problems is GitHub solving and how is that benefiting you?As a data scientist we have designed and scheduled multiple etl scripts to execute dailyGithub helps as a repository to store the data and store code versionswe can easily add new scripts test those versions without changing entire codeeasy to collaborate across teamsReview collected by and hosted on G2.com.",
+      "date": "Feb 23, 2025",
+      "url": "https://www.g2.com/products/github/reviews/github-review-10877468",
+      "rating": "5.0"
+    },
+    {
+      "username": "Alfredo P.",
+      "summary": "N/A",
+      "review": "What do you like best about GitHub?I have been using it for more than 3 years, it is practical, it has all the necessary features to make me feel comfortable, it is easy to use and safe with the projects I manage. As for customer support, I have used it and have had good results. Once I had problems with my git actions and they helped me solve it and also gave me guidelines to use it in the best way.I have implemented it in the desktop and web versions and added it to IDEs that I have worked with, such as visual code or android studio.My frequency of use is daily, I keep my projects there.Review collected by and hosted on G2.com.What do you dislike about GitHub?I don't like that in the web version when I merge with another branch the changes are passed to both branches, this is usually counterproductive.Review collected by and hosted on G2.com.What problems is GitHub solving and how is that benefiting you?Previously we did not have a CD/CI with which we could deploy our projects automatically, with GitHub we were able to solve this.Review collected by and hosted on G2.com.",
+      "date": "Sep 25, 2024",
+      "url": "https://www.g2.com/products/github/reviews/github-review-10303903",
+      "rating": "5.0"
+    }
+  ]
+}
