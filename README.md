@@ -26,9 +26,7 @@ This Python script allows you to scrape product reviews from G2.com for any SaaS
    You only need to run the first code cell once:
    ```python
    !pip install requests beautifulsoup4 lxml
-Run the main script. It will prompt you to enter:
-
-🔑 Your ScraperAPI Key 3a55462bcbf5ecc5534d373ab351391c
+Run the  "Review_Scraper " code 
 
 🏢 The company slug (example: amazon-web-services, slack, zoom, etc.)
 
