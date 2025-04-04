@@ -1,53 +1,106 @@
 # Review_scraper_project 
 
-A Python script to scrape product reviews from G2, Capterra, and TrustRadius for a specified company and date range, designed to run in Visual Studio Code (VS Code). The script outputs reviews in a JSON file.
+ G2 Product Review Scraper (Google Colab-Ready)
 
-## Objective
-Scrape reviews from G2, Capterra, and TrustRadius based on a company name, start date, end date, and source, and save them as JSON. This README guides you through running the script in VS Code.
+This Python script allows you to scrape product reviews from G2.com for any SaaS company using ScraperAPI. It is built to run easily on Google Colab and outputs the reviews in a structured JSON file.
 
-## Features
-- Scrapes reviews from G2, Capterra, and TrustRadius (bonus third source).
-- Accepts command-line inputs: company name, start date, end date, and source.
-- Outputs a JSON file with review details (title, description, date, rating).
-- Handles pagination and date filtering.
-- Includes error handling and retry logic for failed requests.
+---
 
-## Prerequisites
-- **VS Code**: Download from (https://code.visualstudio.com/).
-- **Python 3.6+**: Install from (https://www.python.org/downloads/) and add to PATH.
-- **Python Libraries**: `requests`, `beautifulsoup4`.
+## 📌 Features
 
-## Setup in VS Code
+- ✅ Scrapes product reviews from G2.com using a company slug
+- ✅ Outputs a JSON file containing:
+  - Product name
+  - Total number of reviews
+  - Individual reviews with username, summary, review body, rating, date, and review URL
+- ✅ Downloadable file via Google Colab
+- ✅ Uses ScraperAPI to bypass IP bans and scraping protection
 
-### 1. Install VS Code and Python
-1. Install VS Code if not already installed.
-2. Install Python 3.6+ and verify:
-   ```bash
-   python --version
+---
 
-   Open Project in VS Code
+## 🚀 How to Use
 
-   Install Python Extension  ->  Search for "Python" (by Microsoft)
-   -> Select Python interpreter:
-Ctrl+Shift+P > "Python: Select Interpreter" > Choose your Python version.
+1. Open the script in Google Colab.
 
-Install Dependencies
-Open the terminal in VS Code
-paste this
+2. Install required libraries:
+   You only need to run the first code cell once:
+   ```python
+   !pip install requests beautifulsoup4 lxml
+Run the main script. It will prompt you to enter:
 
-pip install requests beautifulsoup4
+🔑 Your ScraperAPI Key 3a55462bcbf5ecc5534d373ab351391c
+
+🏢 The company slug (example: amazon-web-services, slack, zoom, etc.)
+
+Once executed, it will:
+
+Fetch reviews from G2.com
+
+Save the results as a JSON file (e.g., amazon-web-services_g2_reviews.json)
+
+Automatically download the file to your machine
+
+🧠 What is a "Company Slug"?  https://www.g2.com/
+A company slug is the name used in the G2 product URL. For example:
+
+G2 URL: https://www.g2.com/products/amazon-web-services/reviews
+
+Slug: amazon-web-services
+
+Some other examples:
+
+Slack → slack
+
+Zoom → zoom
+
+Google Workspace → google-workspace
+
+🔐 Get Your ScraperAPI Key
+Go to: https://www.scraperapi.com
+
+Sign up for a free account (no card required)
+
+Copy your API key from the dashboard
+
+💡 Notes
+This script only scrapes the first page of reviews. For full pagination support, enhancements will be needed.
+
+Always check the G2.com Terms of Service before scraping.
+
+Works only with products listed on G2.
+
+📁 Output
+The output is a downloadable JSON file with the following structure:
+
+json
+Copy
+Edit
+{
+  "product_name": "Amazon Web Services",
+  "number_of_reviews": "1,230 Reviews",
+  "reviews": [
+    {
+      "username": "Jane D.",
+      "summary": "Powerful cloud platform",
+      "review": "AWS provides a scalable solution...",
+      "date": "March 2024",
+      "url": "/products/amazon-web-services/reviews/abc123",
+      "rating": "5"
+    },
+    ...
+  ]
+}
+🛠 To-Do (Optional Enhancements)
+Add pagination to scrape multiple pages of reviews
+
+Filter reviews by date range
+
+Add support for other platforms (e.g., Capterra, TrustRadius)
+
+👨‍💻 Author
+Built with ❤️ by Yash 
 
 
-Running the Script in VS Code
-
-Option 1: Run via Terminal 
-cd path/to/review_scraper_project
-
-Run the script with arguments: 
-Sample Command:     
-python review_scraper.py "Company Name" "2023-01-01" "2023-12-31" "TrustRadius" 
-
-python review_scraper.py "Slack" "2023-01-01" "2023-12-31" "capterra"
 
 after run this
 Output: A file like Slack_capterra_reviews.json will appear in the Explorer pane.
