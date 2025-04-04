@@ -1,27 +1,24 @@
-# Step 1: Install required packages (run only once)
+# Step 1: Install required packages
 !pip install requests beautifulsoup4 lxml
 
-# Step 2: Import necessary libraries
+# Step 2: Import libraries
 import requests
 from bs4 import BeautifulSoup
 import json
-from datetime import datetime
 from google.colab import files
 
-# Step 3: Input your ScraperAPI key and the company (G2 product slug)
-API_KEY = input("🔑 Enter your ScraperAPI key: ").strip()
-company_slug = input("🏢 Enter the company slug (e.g., 'amazon-web-services'): ").strip()
+# Step 3: Configuration
+API_KEY = "3a55462bcbf5ecc5534d373ab351391c"  # ← Replace this with your actual ScraperAPI key
+company_slug = input("🏢 Enter the G2 company slug (e.g., amazon-web-services, slack): ").strip()
 
-# Optional: add start and end date logic later if supported by G2
-
-# Step 4: Construct G2 URL
+# Step 4: Construct the G2 reviews URL
 base_g2_url = f"https://www.g2.com/products/{company_slug}/reviews"
 payload = {
     "api_key": API_KEY,
     "url": base_g2_url
 }
 
-# Step 5: Request the page using ScraperAPI
+# Step 5: Request the page through ScraperAPI
 response = requests.get("https://api.scraperapi.com", params=payload)
 
 if response.status_code != 200:
@@ -29,7 +26,7 @@ if response.status_code != 200:
 else:
     soup = BeautifulSoup(response.text, "lxml")
 
-    # Initialize the result dictionary
+    # Initialize result dictionary
     results = {
         "product_name": "",
         "number_of_reviews": "",
@@ -50,7 +47,7 @@ else:
         if reviews_element else "Number of reviews not found"
     )
 
-    # Extract each review card
+    # Loop through review cards
     review_cards = soup.select(".paper.paper--white.paper--box")
     for review in review_cards:
         review_data = {}
@@ -71,11 +68,15 @@ else:
 
         results["reviews"].append(review_data)
 
-    # Step 6: Save as JSON file
+    # Step 6: Save to JSON
     filename = f"{company_slug}_g2_reviews.json"
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
 
+    print(f"✅ Data written to {filename}")
+
+    # Step 7: Download the file
+    files.download(filename)
     print(f"✅ Data written to {filename}")
 
     # Step 7: Offer download link
