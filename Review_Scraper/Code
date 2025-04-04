@@ -1,0 +1,82 @@
+# Step 1: Install required packages (run only once)
+!pip install requests beautifulsoup4 lxml
+
+# Step 2: Import necessary libraries
+import requests
+from bs4 import BeautifulSoup
+import json
+from datetime import datetime
+from google.colab import files
+
+# Step 3: Input your ScraperAPI key and the company (G2 product slug)
+API_KEY = input("🔑 Enter your ScraperAPI key: ").strip()
+company_slug = input("🏢 Enter the company slug (e.g., 'amazon-web-services'): ").strip()
+
+# Optional: add start and end date logic later if supported by G2
+
+# Step 4: Construct G2 URL
+base_g2_url = f"https://www.g2.com/products/{company_slug}/reviews"
+payload = {
+    "api_key": API_KEY,
+    "url": base_g2_url
+}
+
+# Step 5: Request the page using ScraperAPI
+response = requests.get("https://api.scraperapi.com", params=payload)
+
+if response.status_code != 200:
+    print("❌ Failed to fetch the page. Check your API key or company slug.")
+else:
+    soup = BeautifulSoup(response.text, "lxml")
+
+    # Initialize the result dictionary
+    results = {
+        "product_name": "",
+        "number_of_reviews": "",
+        "reviews": []
+    }
+
+    # Extract product name
+    product_name_element = soup.select_one(".product-head__title a")
+    results["product_name"] = (
+        product_name_element.get_text(strip=True)
+        if product_name_element else "Product name not found"
+    )
+
+    # Extract number of reviews
+    reviews_element = soup.find("li", {"class": "list--piped__li"})
+    results["number_of_reviews"] = (
+        reviews_element.get_text(strip=True)
+        if reviews_element else "Number of reviews not found"
+    )
+
+    # Extract each review card
+    review_cards = soup.select(".paper.paper--white.paper--box")
+    for review in review_cards:
+        review_data = {}
+
+        username_element = review.find("a", {"class": "link--header-color"})
+        summary_element = review.find("h3", {"class": "m-0 l2"})
+        review_body_element = review.find("div", itemprop="reviewBody")
+        review_date_element = review.find("time")
+        review_url_element = review.find("a", {"class": "pjax"})
+        rating_element = review.find("meta", itemprop="ratingValue")
+
+        review_data["username"] = username_element.get_text(strip=True) if username_element else "N/A"
+        review_data["summary"] = summary_element.get_text(strip=True).replace('"', '') if summary_element else "N/A"
+        review_data["review"] = review_body_element.get_text(strip=True) if review_body_element else "N/A"
+        review_data["date"] = review_date_element.get_text(strip=True) if review_date_element else "N/A"
+        review_data["url"] = review_url_element["href"] if review_url_element else "N/A"
+        review_data["rating"] = rating_element["content"] if rating_element else "N/A"
+
+        results["reviews"].append(review_data)
+
+    # Step 6: Save as JSON file
+    filename = f"{company_slug}_g2_reviews.json"
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
+
+    print(f"✅ Data written to {filename}")
+
+    # Step 7: Offer download link
+    files.download(filename)
